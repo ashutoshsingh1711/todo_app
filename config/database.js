@@ -10,11 +10,11 @@ const dbConnect = () => {
     .then(()=>{
         console.log("Db connection is successful");
     })
-    .catch((error, () =>{
+    .catch((error) =>{
         console.log("Issue in db connection");
         console.error(error.message);
         process.exit(1);
-    }))
+    });
 }
 
 module.exports = dbConnect;
